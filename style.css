@@ -235,7 +235,7 @@ ul img:hover {
     table, td, th{ 
         border: 1px solid black;
         border-collapse: collapse;
-        font-size: 10px;
+        font-size: 12px;
     }
     td {
         padding: 0;
