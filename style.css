@@ -226,6 +226,7 @@ ul img:hover {
     /*                              TABLE                                */
     .table-container {
         position: relative;
+        margin-left: 0;
     }
     table {
         width: 50%;
