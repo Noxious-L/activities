@@ -225,8 +225,9 @@ ul img:hover {
 
     /*                              TABLE                                */
     .table-container {
-        position: relative;
-        margin-left: 0;
+        margin: auto;
+        width: 100%;
+        padding: 10px;
     }
     table {
         width: 50%;
@@ -234,7 +235,7 @@ ul img:hover {
     table, td, th{ 
         border: 1px solid black;
         border-collapse: collapse;
-        font-size: 12px;
+        font-size: 10px;
     }
     td {
         padding: 0;
