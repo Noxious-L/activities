@@ -124,7 +124,7 @@ td {
     margin-left: 22rem;
 }
 ol {
-    font-size: 28px;
+    font-size: 24px;
 }
 ul {
     font-size: 24px;
@@ -225,7 +225,6 @@ ul img:hover {
     /*                              TABLE                                */
     .table-container {
         position: relative;
-        margin-left: 0.5rem;
     }
     table {
         width: 50%;
