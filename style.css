@@ -140,7 +140,7 @@ ul img:hover {
 
 @media screen and (max-device-width: 400px) {
     * {
-        box-sizing: none;
+        box-sizing: border-box;
     }
     h1 {
         font-size: 22px;
