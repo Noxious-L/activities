@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
 }
 body {
     width: 100%;
@@ -33,6 +38,7 @@ h1 {
     height: 100%;
     width: 15rem;
     background-color: beige;
+    text-transform: uppercase;
     z-index: 100;
 }
 .nav a:link {
@@ -63,9 +69,43 @@ h1 {
     margin-left: 2rem;
     font-size: 22px;
 }
-#s1:hover, #s2:hover, #s3:hover {
+.list-hover {
+    font-size: 30px;
+}
+.list-hover:hover {
     list-style-type: disc;
-    font-family: cursive;
+    text-transform: uppercase;
+    font-family: "Yatra One", sans-serif;
+}
+.nav-bar ul li .dropbox {
+    position: absolute;
+    display: none;
+    width: 13rem;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #8ea0ad;
+    padding: 5px 5px;
+    z-index: 101;
+}
+.nav-bar ul li:hover .dropbox {
+    display: block;
+}
+.nav-bar ul li .dropbox li {
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+.nav-bar ul li .dropbox li::after {
+    content: '►';
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    transition: 0.25s ease-in-out;
+    transform: scaleX(0);
+}
+.nav-bar ul li .dropbox li:hover::after {
+    transform: scaleX(1);
 }
 
 /* IMAGE MAP */
@@ -132,11 +172,53 @@ ul {
 img {
     border: 2px groove black;
 }
-ul img:hover {
+.list-container ol img:hover {
     border-radius: 50px;
-    border: 3px solid gray;
-    transition: all 1s;
+    transition: 0.5s ease-in-out;
 }
+/* BOOKMARK */
+.bookmark {
+    text-align: center;
+    width: 60rem;
+    height: 245rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    box-shadow: 8px 6px 20px black;
+    border-radius: 25px;
+}
+.bookmark h2 {
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-family: "Ubuntu", sans-serif;
+}
+.bookmark pre {
+    margin-top: 3rem;
+    font-size: 16px;
+}
+#one-thing::after {
+    content: 'One Direction';
+    position: relative;
+    display: block;
+    margin-top: -0.25rem;
+    font-size: 12px;    
+}
+#yoasobi::after {
+    content: 'yoasobi';
+    position: relative;
+    display: block;
+    margin-top: -0.7rem;
+    font-size: 14px;
+}
+#karera::after {
+    content: 'bini';
+    position: relative;
+    display: block;
+    margin-top: -0.45rem;
+    font-size: 16px;
+}
+
 
 @media screen and (max-device-width: 400px) {
     * {
@@ -167,6 +249,7 @@ ul img:hover {
         height: 100px;
         background-color: beige;
         z-index: 100;
+        transition: top 0.3s;
     }
     .nav a:link {
         text-decoration: none;
@@ -193,16 +276,61 @@ ul img:hover {
     .Logo a:active, a:visited {
         color: black;
     }
+    .list-hover {
+        font-size: 16px;
+    }
+    .list-hover:hover {
+        list-style-type: disc;
+        text-transform: uppercase;
+        font-family: "Yatra One", sans-serif;
+    }
     .nav-bar {
             position: absolute;
             top: -3.5rem;
             left: 7rem;
     }
     .nav-bar ul {
-        font-size: 18px;
+        font-size: 16px;
     }
-    #s1:hover, #s2:hover, #s3:hover {
-        font-family: 'Courier New', Courier, monospace;
+    .nav-bar ul li .dropbox {
+        position: absolute;
+        display: none;
+        width: 10rem;
+        line-height: 20px;
+        text-align: center;
+        border-radius: 6px;
+        background-color: #8ea0ad;
+        padding: 5px 5px;
+        z-index: 101;
+    }
+    .nav-bar ul li:hover .dropbox {
+        display: block;
+    }
+    .nav-bar ul li .dropbox li {
+        display: block;
+        position: relative;
+        cursor: pointer;
+    }
+    .nav-bar ul li .dropbox li::after {
+        content: '►';
+        position: absolute;
+        display: inline-block;
+        left: 0;
+        transition: 0.25s ease-in-out;
+        transform: scaleX(0);
+    }
+    .nav-bar ul li .dropbox li:hover::after {
+        transform: scaleX(1);
+    }
+    #li-bookmark::after {
+        content: '▼';
+        position: absolute;
+        font-size: 12px;
+        transition: 0.3s ease-in-out;
+        transform: scaleY(0); 
+    }
+    #li-bookmark:hover::after {
+        transform: scaleY(1);
     }
 
     /*                              IMAGE MAP                                */ 
@@ -275,4 +403,48 @@ ul img:hover {
         border: 3px solid gray;
         transition: all 1s;
     }
+
+    /*                                 BOOKMARK                           */
+    .bookmark {
+        text-align: center;
+        width: 22rem;
+        height: 155rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5rem;
+        box-shadow: 8px 6px 20px black;
+        border-radius: 15px;
+    }
+    .bookmark h2 {
+        font-size: 20px;
+        font-weight: 800;
+        text-transform: uppercase;
+        font-family: "Ubuntu", sans-serif;
+    }
+    .bookmark pre {
+        margin-top: 3rem;
+        font-size: 10px;
+    }
+    #one-thing::after {
+        content: 'One Direction';
+        position: relative;
+        display: block;
+        margin-top: -0.25rem;
+        font-size: 8px;    
+    }
+    #yoasobi::after {
+        content: 'yoasobi';
+        position: relative;
+        display: block;
+        margin-top: -0.5rem;
+        font-size: 10px;
+    }
+    #karera::after {
+        content: 'bini';
+        position: relative;
+        display: block;
+        margin-top: -0.45rem;
+        font-size: 12px;
+    }
 }
+
