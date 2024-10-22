@@ -354,7 +354,7 @@ img {
     /*                              TABLE                                */
     .table-container {
         margin: auto;
-        width: 100%;    
+        width: 22rem;    
         padding: 0;
     }
     table {
@@ -408,7 +408,7 @@ img {
     .bookmark {
         text-align: center;
         width: 22rem;
-        height: 160rem;
+        height: 165rem;
         margin-left: auto;
         margin-right: auto;
         margin-top: 5rem;
